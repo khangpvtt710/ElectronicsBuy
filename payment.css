@@ -1,0 +1,133 @@
+:root {
+    --main-text-font: Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex: wrap;
+}
+.payment-top-swap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.payment-top {
+    height: 2px;
+    width: 70%;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 0 100px;
+}
+
+.payment-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.payment-top-item i {
+    color: #dddddd;
+}
+.payment-top-payments {
+    border: 1px solid #0db7ea;
+}
+.payment-top-payments i{
+    color: #0db7ea;
+}
+.payment-content-left{
+    width: 60%;
+    margin-left: 100px;
+}
+.payment-content-right {
+    width: 40%;
+    border: 2px solid #ddd;
+    padding-left: 12px;
+}
+.payment-content-left p,label{
+    font-size: 12px;
+    font-family: var(--main-text-font);
+
+}
+.payment-content-right-button{
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.payment-content-right-button input{
+    height: 30px;
+    width: 200px;
+    margin-right: 100px;
+    padding-left: 12px;
+}
+.payment-content-right-button button{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    color: #fefefe;
+    border: none;
+    cursor: pointer;
+}
+.payment-content-right-mnv{
+    margin-top: 20px;
+}
+.payment-content-right-mnv select{
+    height: 30px;
+    width: 100%;
+    color: #75758a;
+    padding-left: 12px;
+}
+.payment-content-right-payment{
+    margin-top: 50px;
+    align-items:  center;
+    text-align: center;
+}
+.payment-content-right-payment button{
+    height: 35px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+.payment-content-right-payment button:hover{
+    background-color: black;
+    color: #fff;
+}
+.payment-content-left p{
+    font-size: 15px;
+}
+.payment-content-left-method-payment p{
+    font-size: 20px;
+}
+.payment-content-left-method-payment p:nth-child(2) {
+    font-size: 15px;
+}
+.payment-content-left-method-payment-item label{
+    font-size: 15px;
+}
+
+.payment-content-left-method-payment-item-img1 img{
+    width: 200px;
+    margin: 12px 0;
+}
+.payment-content-left-method-payment-item-img2 img {
+    width: 200px;
+    margin: 12px 0;
+    height: 80px;
+}
+.payment-content-left-method-payment-item-img3 img {
+    width: 50px;
+    border-radius: 20%;
+    margin: 12px 0;
+}

@@ -1,0 +1,221 @@
+:root {
+    --main-text-font: Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex: wrap;
+}
+.delivery{
+    padding: 100px 0;
+}
+.delivery-top-swap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.delivery-top{
+    height: 2px;
+    width: 70%;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 100px;
+}
+.delivery-top-item{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.delivery-top-item i{
+    color: #dddddd;
+}
+.delivery-top-adress{
+    border: 1px solid #0db7ea;
+}
+.delivery-top-adress i{
+    color: #0db7ea;
+}
+.delivery-content-left {
+    width: 60%;
+    padding-right: 12px;
+}
+
+.delivery-content-left p {
+    font-family: var(--main-text-font);
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.delivery-content-left>p {
+    font-weight: bold;
+}
+
+.delivery-content-left-dangnhap {
+    margin-top: 12px;
+
+}
+
+.delivery-content-left-dangnhap i {
+    font-size: 12px;
+    margin-right: 12px;
+}
+
+.delivery-content-left-khachle {
+    margin: 12px 0;
+}
+
+.delivery-content-left-khachle input {
+    margin-right: 12px;
+}
+
+.delivery-content-left-dangky {
+    margin-bottom: 30px;
+}
+
+.delivery-content-left-dangky input {
+    margin-right: 12px;
+}
+
+.delivery-content-left-input-top {
+    /* Bỏ display: block để lớp 'row' (hoặc mặc định) có thể xử lý bố cục ngang */
+    display: flex;
+    /* Sử dụng flexbox để các item nằm cạnh nhau */
+    flex-wrap: wrap;
+    /* Cho phép các item xuống dòng khi hết chỗ */
+    justify-content: space-between;
+    /* Tạo khoảng cách giữa 2 item trên cùng một dòng */
+}
+
+.delivery-content-left-input-top-item {
+    /* Thiết lập lại chiều rộng khoảng 50% để 2 item nằm trên 1 dòng */
+    width: calc(50% - 6px);
+    /* Điều chỉnh lại phép tính để tính cả khoảng cách giữa 2 cột */
+    /* Bỏ display: block để nó hiển thị inline hoặc flex item */
+    margin-bottom: 12px;
+    /* Thêm khoảng cách dưới cho mỗi item */
+}
+
+.delivery-content-left-input-top-item input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #dddddd;
+    padding: 6px;
+}
+
+/* Thêm khoảng cách trên cho input dưới cùng */
+.delivery-content-left-input-botton {
+    margin-top: 12px;
+    /* Điều chỉnh khoảng cách nếu cần */
+    display: block;
+    /* Đảm bảo input này nằm trên dòng riêng */
+    width: 100%;
+    /* Đảm bảo input này chiếm toàn bộ chiều rộng */
+}
+
+.delivery-content-left-input-botton label {
+    display: block;
+    /* Đảm bảo label nằm trên input */
+    margin-bottom: 5px;
+    /* Khoảng cách giữa label và input */
+}
+
+
+.delivery-content-left-input-botton input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #dddddd;
+    padding-left: 6px;
+}
+
+.delivery-content-left-button {
+    margin-top: 20px;
+    /* Thêm khoảng cách từ các input */
+    display: flex;
+    /* Giả định bạn muốn các nút cạnh nhau */
+    justify-content: space-between;
+    /* Khoảng cách giữa link và button */
+    align-items: center;
+    width: 100%;
+    /* Đảm bảo container nút chiếm toàn bộ chiều rộng */
+}
+
+.delivery-content-left-button a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: blue;
+    /* Hoặc màu link mong muốn của bạn */
+}
+
+.delivery-content-left-button a span {
+    margin-right: 5px;
+}
+
+.delivery-content-left-button button {
+    padding: 10px 20px;
+    background-color: #165497;
+    /* Màu nút ví dụ */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.delivery-content-left-button button:hover{
+    background-color: #0db7ea;
+    
+}
+
+.delivery-content-left-button button p {
+    margin: 0;
+    font-family: var(--main-text-font);
+    /* Bỏ margin mặc định của đoạn văn */
+    color: white;
+    /* Đảm bảo màu chữ là trắng */
+}
+.delivery-content-right{
+    width: 40%;
+    padding-left: 12px;
+    border-left: 2px solid #ddd;
+    height: auto;
+}
+.delivery-content-right table{
+    width: 100%;
+    font-family: var(--main-text-font);
+    font-size: 12px;
+    text-align: center;
+}
+.delivery-content-right table tr th:first-child{
+    text-align: left;
+}
+.delivery-content-right table tr th{
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ddd;
+
+}
+.delivery-content-right table tr th:last-child {
+    text-align: right;
+}
+.delivery-content-right table tr td{
+    padding: 6px 0;
+}
+.delivery-content-right table tr:nth-child(4){
+    border-top: 2px solid #ddd;
+
+}
+.delivery-content-right table tr td:last-child{
+    text-align: right;
+}
+.delivery-content-right table tr td:first-child{
+    text-align: left;
+}

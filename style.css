@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.brick{
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 4px solid #515050;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+}
+header:hover{
+    background: rgba(255, 255, 255, 1);
+}
+header.sticky{
+    background: rgba(255, 255, 255, 1);
+}
+/*--------------------------------------logo-------------------------------------*/
+.logo{
+    flex: 1;
+}
+.logo img{
+    width: 190px;
+}
+/*------------------------------------------menu---------------------------------*/
+.menu{
+    flex: 3;
+    display: flex;
+}
+.menu > li:hover .sub-menu{
+    visibility: visible;
+    top: 50px;
+    background-color: aliceblue;
+    z-index: 1;
+}
+.sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0  10px 20px;
+    visibility: hidden;
+    top: 100px;
+    transition: 0.3s, visibility 0.3s ease;
+}
+.sub-menu ul{
+    padding: 5px;
+}
+.sub-menu li a{
+    font-weight: normal;
+    font-size: 12px!important;
+}
+.menu  li {
+    padding: 0 25px;
+}
+.menu li a {
+    font-size: 15px;
+    font-weight: bold!important;
+    line-height: 20px;
+    display: block;
+}
+/*-------------------------------------others--------------------------------------*/
+.others {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.others li {
+    padding: 0 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Đảm bảo các phần tử con được căn giữa theo chiều dọc */
+}
+.others li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others li:last-child::after {
+    display: none;
+}
+
+.others li:last-child a {
+    margin-right: 12px;
+    color: #333;
+}
+
+
+.others>li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding-right: 30px;
+    background:  transparent;
+    outline: none;
+    /* Tạo khoảng trống cho hình ảnh bên phải */
+}
+
+.others>li:first-child img {
+    position: absolute;
+    right: 10px;
+    /* Đặt hình ảnh ở phía bên phải của ô nhập liệu */
+    width: 20px;
+    /* Kích thước của ảnh */
+    height: 20px;
+    /* Kích thước của ảnh */
+}
+
+.others>li:first-child input:focus {
+    outline: none;
+    /* Loại bỏ viền mặc định khi ô nhập liệu được chọn */
+}
+
+.others i {
+    font-size: 24px;
+    color: #333;
+}
+/*------------------------------aspect-radio---------------------------------------------*/
+.aspect-radio {
+    position: relative;
+    display: block;
+    padding: 56.25%;
+    
+    
+}
+
+.aspect-radio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Đảm bảo ảnh chiếm hết chiều rộng của màn hình */
+    height: 100%;
+    /* Đảm bảo ảnh chiếm hết chiều cao của màn hình */
+    display: block;
+    z-index: -1;
+    /* Đảm bảo ảnh phủ toàn bộ màn hình mà không bị méo */
+}
+.dot-container{
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.dot{
+    height: 18px;
+    width: 18px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.dot.active{
+    background-color: #000;
+}
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 5px solid #000;
+    overflow: hidden;
+}
+/*--------------------------------------app-------------------------------------*/
+.app-container{
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+.app-google{
+    margin: 50px;
+}
+.app-google img{
+    height: 100px;
+    cursor: pointer;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+}
+.app-container input{
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+/*-----------------------------------footer----------------------------------------*/
+footer{
+    text-align: center;
+}
+.footer-top{
+    display: flex;
+    text-align: center;
+    justify-content: center ;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top img{
+    height:  50px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #CCCCCC;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+.footer-top li:last-child a{
+    margin-right: 12px;
+    color: #000000;
+}
+.footer-center{
+    text-align: center;
+}
+.footer-bottom{
+    margin: 20px 0;
+    text-align: center;
+}
