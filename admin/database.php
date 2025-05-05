@@ -1,4 +1,10 @@
 <?php
+include "config.php"
+
+?>
+
+
+<?php
 class Database {
     public $host = DB_HOST;
     public $user = DB_USER;
@@ -24,7 +30,7 @@ class Database {
 
     // Select or Read data
     public function select($query) {
-        $result = $this->link->query($query) or die($this->link->error . " at line " . __LINE__);
+        $result = $this->link->query($query) or die($this->link->error.__LINE__);
 
         if ($result->num_rows > 0) {
             return $result;

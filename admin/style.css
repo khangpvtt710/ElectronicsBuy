@@ -59,3 +59,15 @@ header{
     border: 1px solid brown;
     color: brown;
 }
+/*-----------------------------------------------cartegorylist-----------*/
+.admin-content-right-cartegory-list table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.admin-content-right-cartegory-list table tr th,td{
+    border: 1px solid #010101;
+}
+table{
+    border-collapse: collapse;
+}

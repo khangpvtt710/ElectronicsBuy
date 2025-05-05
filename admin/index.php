@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectronicsBuy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<?php
+include "headermain.php"
+?>
+<?php
+include "class/cartegory-class.php";
+?>
+<?php
+$cartegory = new cartegoryclass;
+$show_cartegory = $cartegory->show_cartegory();
+?>
 
-</head>
 <body>
-    
+
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="">
         </div>
-
         <div class="menu">
+
             <li><a href="">RAM</a>
                 <ul class="sub-menu">
                     <li><a href="">DDR</a></li>
@@ -49,7 +49,7 @@
                         </ul>
                     </li>
                 </ul>
-            
+
             </li>
             <li><a href="">Ổ CỨNG</a>
                 <ul class="sub-menu">
@@ -67,7 +67,7 @@
                             <li><a href="">512G</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </li>
             <li><a href="">BÀN PHÍM</a>
@@ -87,10 +87,10 @@
                             <li><a href="">Có dây</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Bàn phím QWERTY</a>   
+                    <li><a href="">Bàn phím QWERTY</a>
                     </li>
                     <li><a href="">Bàn phím công thái học</a>
-                        
+
                     </li>
                 </ul>
             </li>
@@ -121,16 +121,16 @@
                     <li><a href="">IPS</a>
                     </li>
                     <li><a href="">OLED/AMOLED</a>
-                        
+
                     </li>
                     <li><a href="">RETINA</a>
-                        
+
                     </li>
                     <li><a href="">TN</a>
-                        
+
                     </li>
                     <li><a href="">CCFL</a>
-                        
+
                     </li>
                 </ul>
             </li>
@@ -148,7 +148,30 @@
                     <li><a href="">Bluetooth</a></li>
                 </ul>
             </li>
+            <!--_--------------------------------------------->
+            <?php
+            if ($show_cartegory) {
+                $i = 0;
+                while ($result = $show_cartegory->fetch_assoc()){$i++;
+            ?>
+
+            <li><a href=""><?php echo $result['cartegory_name']?></a>
+                <ul class="sub-menu">
+                    <li><a href=""><?php echo $i?></a></li>
+                    <li><a href=""><?php echo $result['cartegory_id']?></a></li>
+                    <li><a href="">Bluetooth</a></li>
+                </ul>
+
+
+                <?php
+                }
+            }
+            
+            ?>
+
+                <!--_-------------------------------------------->
         </div>
+
 
         <div class="others">
             <li><input placeholder="Tìm Kiếm" type="text"> <img src="img/search.png"> </li>
@@ -187,30 +210,7 @@
         <p>Nhận bản tin từ trang web</p>
         <input type="text" placeholder="nhập email của bạn ....">
     </section>
+    <?php
+include "footermain.php"
+?>
     <!-----------------------------------footer---------------------------------------->
-    <div class="footer-top">
-        <li><a href=""><img src="img/logo.png" alt=""></a></li>
-        <li><a href=""></a>Liên hệ</li>
-        <li><a href=""></a>Tuyển dụng</li>
-        <li><a href=""></a>Giới thiệu</li>
-        <li>
-            <a href="" class="fa fa-facebook"></a>
-            <a href="" class="fa fa-github"></a>
-            <a href="" class="fa fa-instagram"></a>
-        </li>
-    </div>
-    <div class="footer-center">
-        <p>
-            Công ty TNHH 1 thành viên <b>TRIANGLE GREEN</b>.<br>
-            Lớp: <b>47CNTTB</b>.
-            MSSV: <b>46.01.104.076</b> <br>
-            <b>Trần Hoàng Khang</b> <br>
-            <b>ĐẠI HỌC SƯ PHẠM THÀNH PHỐ HỒ CHÍ MINH</b>
-        </p>
-    </div>
-    <div class="footer-bottom">
-        khangpvtt710@gmail.com - 0703200897
-    </div>
-</body>
-<script src="js/index.js"></script>
-</html>
