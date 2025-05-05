@@ -9,8 +9,8 @@
             </li>
             <li><a href="#">Loại Sản Phẩm</a>
                 <ul>
-                    <li><a href="#">Thêm loại Sản Phẩm</a></li>
-                    <li><a href="#">Danh sách loại Sản Phẩm</a></li>
+                    <li><a href="brandadd.php">Thêm loại Sản Phẩm</a></li>
+                    <li><a href="brandlist.php">Danh sách loại Sản Phẩm</a></li>
                 </ul>
             </li>
             <li><a href="#">Sản Phẩm</a>

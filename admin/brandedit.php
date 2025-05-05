@@ -4,12 +4,29 @@ include "header.php";
 include "slider.php";
 include "class/brand-class.php";
 ?>
+
+
 <?php
-$brand = new brandclass;
+$brand = new brandclass();
+
+if (!isset($_GET['brand_id']) || $_GET['brand_id'] == NULL) {
+    echo "<script>window.location='brandlist.php'</script>";
+} else {
+    $brand_id = $_GET['brand_id'];
+}
+$get_brand = $brand->get_brand($brand_id);
+if($get_brand){
+    $resultA = $get_brand->fetch_assoc();
+}
+?>
+
+
+<?php
+
 if($_SERVER['REQUEST_METHOD']==='POST'){
     $cartegory_id = $_POST['cartegory_id'];
     $brand_name = $_POST['brand_name'];
-    $insert_brand = $brand->insert_brand($cartegory_id, $brand_name);
+    $update_brand = $brand->update_brand($cartegory_id, $brand_name,$brand_id);
 }
 ?>
 <style>
@@ -31,13 +48,15 @@ select {
                     
                 
                 ?>
-                <option value="<?php echo $result['cartegory_id']?>"><?php echo $result['cartegory_name']?></option>
+                <option <?php if($resultA['cartegory_id']==$result['cartegory_id']){echo "SELECTED";}?>
+                    value="<?php echo $result['cartegory_id']?>"><?php echo $result['cartegory_name']?></option>
                 <?php
                 }}
                 ?>
             </select> <br>
-            <input required name="brand_name" type="text" placeholder="nhập tên sản phẩm">
-            <button type="submit">Thêm</button>
+            <input required name="brand_name" type="text" placeholder="nhập loại sản phẩm"
+                value="<?php echo $resultA['brand_name']?>">
+            <button type="submit">Cập Nhật</button>
         </form>
     </div>
 </div>
