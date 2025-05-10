@@ -1,6 +1,6 @@
 <section class="admin-content">
     <div class="admin-content-left">
-        <ul>
+        <ul style="margin-left: 30px; font-size: 20px;">
             <li><a href="#">Danh Mục</a>
                 <ul>
                     <li><a href="cartegoryadd.php">Thêm danh mục</a></li>
@@ -15,8 +15,8 @@
             </li>
             <li><a href="#">Sản Phẩm</a>
                 <ul>
-                    <li><a href="#">Thêm Sản Phẩm</a></li>
-                    <li><a href="#">Danh sách Sản Phẩm</a></li>
+                    <li><a href="productadd.php">Thêm Sản Phẩm</a></li>
+                    <li><a href="productlist.php">Danh sách Sản Phẩm</a></li>
                 </ul>
             </li>
         </ul>

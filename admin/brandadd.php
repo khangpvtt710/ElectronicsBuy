@@ -36,8 +36,8 @@ select {
                 }}
                 ?>
             </select> <br>
-            <input required name="brand_name" type="text" placeholder="nhập tên sản phẩm">
-            <button type="submit">Thêm</button>
+            <input style="margin-left: 12px;" required name="brand_name" type="text" placeholder="nhập tên sản phẩm">
+            <button style="margin-left: 12px;" type="submit">Thêm</button>
         </form>
     </div>
 </div>

@@ -14,6 +14,7 @@ header{
     border-bottom: 2px solid #ddd;
     text-align: center;
     align-items: center;
+    display: flex;
 }
 
 .admin-content{
@@ -29,6 +30,7 @@ header{
 .admin-content-left >ul> li> a{
     font-weight: bold;
 }
+
 .admin-content-left ul li{
     margin: 6px 0;
 }
@@ -45,6 +47,8 @@ header{
     padding-left: 12px ;
     margin-top: 20px;
 }
+
+.admin-content-right-product-add button,
 .admin-content-right-cartegory-add button{
     display: block;
     margin-top: 10px;
@@ -54,7 +58,9 @@ header{
     background-color: brown;
     border: none;
     color: white;
+    transition: all 0.3s ease;
 }
+.admin-content-right-product-add button:hover,
 .admin-content-right-cartegory-add button:hover{
     background-color: transparent;
     border: 1px solid brown;
@@ -71,4 +77,25 @@ header{
 }
 table{
     border-collapse: collapse;
+}
+/*-------------product---------------------*/
+.admin-content-right-product-add input,select{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 6px 12px;
+    padding-left: 12px;
+}
+.admin-content-right-product-add{
+    margin: 0px 40px;
+}
+.admin-content-right-product-add textarea{
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+.admin-content-right-product-add h1{
+    margin-bottom: 20px;
 }
