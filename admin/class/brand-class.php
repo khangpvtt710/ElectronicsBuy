@@ -24,6 +24,12 @@ class brandclass{
         $result = $this->db->select($query);
         return $result;
     }
+
+    public function show_brand_ajax($cartegory_id){
+        $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id ='$cartegory_id' DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
     public function get_brand($brand_id){
         $query = "SELECT * FROM tbl_brand WHERE brand_id = '$brand_id'";
         $result = $this->db->select($query);
