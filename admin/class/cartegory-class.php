@@ -18,6 +18,11 @@ class cartegoryclass{
         $result = $this->db->select($query);
         return $result;
     }
+    public function show_cartegory_main($cartegory_id){
+        $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id = $cartegory_id DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
     public function get_cartegory($cartegory_id){
         $query = "SELECT * FROM tbl_cartegory WHERE cartegory_id = '$cartegory_id'";
         $result = $this->db->select($query);

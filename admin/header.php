@@ -15,5 +15,5 @@
 <body>
     <header style="display: flex; align-items: center; justify-content: center;">
         <img src="img/logo.png" style="height: 200px;">
-        <h1 style="font-size: 50px; color: green;">TRIANGLE GREEN</h1>
+        <h1 style="font-size: 50px; color: green;">TRIANGLE GREEN ADMIN</h1>
     </header>

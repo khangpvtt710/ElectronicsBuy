@@ -1,3 +1,12 @@
+<section class="app-container">
+    <p>Tải ứng dụng moba</p>
+    <div class="app-google">
+        <img src="img/appstore.jpg">
+        <img src="img/chplay.jpg">
+    </div>
+    <p>Nhận bản tin từ trang web</p>
+    <input type="text" placeholder="nhập email của bạn ....">
+</section>
 <div class="footer-top">
     <li><a href=""><img src="img/logo.png" alt=""></a></li>
     <li><a href=""></a>Liên hệ</li>
